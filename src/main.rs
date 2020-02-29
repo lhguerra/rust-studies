@@ -1,9 +1,11 @@
 fn main() {
-  let x = plus_one(5);
+  let condition = true;
+  let number = if condition {
+    5
+  }
+  else {
+    "six"
+  };
 
-  println!("The value of x is: {}", x);
-}
-
-fn plus_one(x: i32) -> i32 {
-  x + 1;
+  println!("The value of number is: {}", number);
 }
