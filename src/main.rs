@@ -1,23 +1,13 @@
 fn main() {
-  let s = "Hello beautiful";
-  let result = first_word(&s);
+  let width1 = 30;
+  let height1 = 50;
 
-  println!("{}", result);
-
-  let s2 = String::from("Hello Beautiful");
-  let result2 = first_word(&s2[..]);
-
-  println!("{}", result2);
+  println!(
+    "The area of the rectangle is {} square pixels",
+    area(width1, height1)
+  );
 }
 
-fn first_word(s: &str) -> &str {
-  let bytes = s.as_bytes();
-
-  for (i, &item) in bytes.iter().enumerate() {
-    if item == b' ' {
-      return &s[..i];
-    }
-  }
-
-  &s[..]
+fn area(width: u32, height: u32) -> u32 {
+  width * height
 }
